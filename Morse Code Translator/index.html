@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Ankycheng</title>
+  
+  
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/earlyaccess/notosanstc.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div class="panels">
+  <div class="panel">
+    <h3>Morse Code Translation</h3>
+    <h1>摩斯密碼翻譯器</h1>
+    <textarea rows="4" placeholder="輸入英文" id="input">Morse Code</textarea>
+    <div class="symbol">⇵</div>
+    <textarea rows="4" placeholder="輸入密碼" id="output"> </textarea>
+    <div class="playlist"></div>
+    <div class="buttons">
+      <button class="purple" id="btnMorse">翻譯成密碼</button>
+      <button class="yellow" id="btnEng">翻譯回來</button>
+      <button class="white" id="btnPlay">播放</button>
+    </div>
+    <audio class="short" src="http://2017.awiclass.monoame.com/audio/morse/short.mp3"></audio>
+    <audio class="long" src="http://2017.awiclass.monoame.com/audio/morse/long.mp3"></audio>
+  </div>
+  <div class="panel yellow">
+    <h3>翻譯清單</h3>
+    <hr/>
+    <ul class="translist"></ul>
+  </div>
+</div>
+<div class="decoration">MORSE CODE</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
