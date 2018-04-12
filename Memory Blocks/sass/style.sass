@@ -1,0 +1,80 @@
+$colorRed: #FF5353
+$colorYellow: #FFC429
+$colorBlue: #5980C1
+$colorWhite: #FBE9B7
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300, 400, 500, 700, 900')
+
+@mixin size($w, $h:$w)
+  width: $w
+  height: $h
+  
+@mixin flexCenter
+  display: flex
+  justify-content: center
+  align-items: center
+
+  
+
+*
+  border: 1px solid white
+  
+html,body
+  background-color: #232526
+  color: white
+  font-family: roboto
+  +flexCenter
+  +size(100%)
+  margin: 0 
+
+.infos
+  position: absolute
+  left: 40px
+  top: 40px
+  h1
+    font-size: 40px
+    margin-top: 0
+    margin-bottom: 0
+    letter-spacing: 1px
+    line-height: 1.2
+  h3
+    font-weight: 500
+    color: red
+  
+.blocks
+  color: white
+  .row
+    display: flex
+  .block
+    +size(100px)
+    +flexCenter
+    border: solid 1px white
+    margin: 12px
+    cursor: pointer
+    transition: 0.5s 0.2s
+    
+    @mixin setBlockColor($color)
+      box-shadow: 0px 0px 35px rgba($color,0.2)
+      background-color: transparent
+      border: solid 1px lighten($color,0.5)
+      &:hover
+        background-color: rgba($color, 0.3)
+        box-shadow: 0px 0px 35px rgba($color, 0.5)
+      &:active
+        background-color: $color
+        box-shadow: 0px 0px 35px $color
+      
+    &:active
+      background-color: #fff
+      transition: 0s
+      color: black  
+      // box-shadow: 0px 0px 35px $colorRed
+    &.block1
+      +setBlockColor($colorRed)
+    &.block2
+      +setBlockColor($colorYellow)
+    &.block3
+      +setBlockColor($colorBlue)
+    &.block4
+      +setBlockColor($colorWhite)
+  
