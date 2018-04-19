@@ -1,38 +1,45 @@
-html, body {
-  background-color: #222;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html, css {
   height: 100%;
-  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #222;
 }
 
 .game {
-  width: 500px;
   height: 500px;
+  width: 500px;
   position: relative;
-  border: solid white 5px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
 }
 .game .board {
-  background-color: #ffab2d;
+  background-color: #FF644E;
 }
 .game .ball {
-  background: white;
+  background-color: #FFF;
+  border-radius: 50%;
 }
-.game .info {
+
+.info {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #222;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #222;
+  color: white;
 }
-.game .grade {
+.info button {
+  border: none;
+  padding: 10px 20px;
+}
+
+.score {
   padding: 10px;
 }

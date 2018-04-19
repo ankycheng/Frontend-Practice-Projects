@@ -53,7 +53,7 @@
     height: 100%
     position: absolute
     left: 0
-    top: 0
+    top: 0文字範本
     display: flex
     justify-content: center
     align-items: center
@@ -77,6 +77,11 @@
 4. 增加collide(otherObject)方法，偵測物件碰撞
 
 ### 建立遊戲物件-實做
+1. [jQuery設定css](http://api.jquery.com/css/)
+2. 判斷otherObj是否在自己的長、寬度範圍內(this.position.x ~ this.position.x+this.size.width)、this.position.y ~ this.position.y+this.size.height)
+    1. Question: 不考慮OtherObj的長、寬？
+3. 使用`this.el.css`直接控制css的屬性
+4. 注意`this.$el`變數有`$`
 
 ```Javascript
 //-------[類別] 遊戲物件
@@ -115,6 +120,10 @@ GameObject.prototype.collide = function(otherObject){
 6. 將`Ball`的`constructor`綁訂在自己的建構子身上
 
 ### 建立球-實做
+
+1. call()方法
+2. 綁定this, this.position, 長寬樣式{}, 選擇器
+3. 沒有定時執行setInterval()不會動
 
 ```Javascript
 //-------[類別] 球 -- //繼承遊戲物件
@@ -301,3 +310,4 @@ Game.prototype.endGame = function(result){
   this.grade=0
 }
 ```
+

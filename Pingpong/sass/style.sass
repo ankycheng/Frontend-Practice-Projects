@@ -1,32 +1,43 @@
-html, body
-  background-color: #222
+$colorBlack: #222
+
+*
+  // border: 1px solid black
+
+html,css
+  height: 100%
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
   color: white
+  background-color: $colorBlack
+  
+.game
+  height: 500px
+  width: 500px
+  //忘記position，給子元素（遊戲物件定位）
+  position: relative
+  border: 5px solid rgba(white,0.2)
+  .board
+    background-color: #FF644E
+  .ball
+    background-color: #FFF
+    border-radius: 50%
+.info
+  width: 100%
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
   display: flex
   justify-content: center
   align-items: center
-  height: 100%
-  margin: 0
-
-.game
-  width: 500px
-  height: 500px
-  position: relative
-  border: solid white 5px
-  .board
-    background-color: #ffab2d
-  .ball
-    background: white
-  .info
-    width: 100%
-    height: 100%
-    position: absolute
-    left: 0
-    top: 0
-    background-color: #222
-    color: white
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-  .grade
-    padding: 10px
+  flex-direction: column
+  background-color: #222
+  color: white
+  button
+    border: none
+    padding: 10px 20px
+    
+.score
+  padding: 10px
